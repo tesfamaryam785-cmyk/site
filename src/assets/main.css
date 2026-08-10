@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Manrope', system-ui, -apple-system, sans-serif;
+
+  /* Primary Deep Agricultural Green (#2D5A3D) */
+  --color-primary-50: #F2F7F4;
+  --color-primary-100: #E1EFE5;
+  --color-primary-200: #C2DFC9;
+  --color-primary-300: #93C49F;
+  --color-primary-400: #5C9F6D;
+  --color-primary-500: #2D5A3D;
+  --color-primary-600: #234730;
+  --color-primary-700: #1A3524;
+  --color-primary-800: #122419;
+  --color-primary-900: #0B160F;
+
+  /* Accent Clay / Terracotta (#C4653C) */
+  --color-accent-50: #FDF6F3;
+  --color-accent-100: #FBEBE4;
+  --color-accent-200: #F6D3C5;
+  --color-accent-300: #EEAE97;
+  --color-accent-400: #E28263;
+  --color-accent-500: #C4653C;
+  --color-accent-600: #A7522D;
+  --color-accent-700: #813E22;
+
+  /* Background Palette */
+  --color-bg-light: #FAF7F2;
+  --color-card-light: #FFFFFF;
+  --color-border-light: #E5E0D8;
+
+  --color-bg-dark: #171917;
+  --color-card-dark: #212421;
+  --color-border-dark: #2E332E;
+
+  /* Status Colors */
+  --color-warning-500: #D97706;
+  --color-warning-600: #B45309;
+  --color-warning-50: #FFFBEB;
+
+  --color-danger-500: #C0392B;
+  --color-danger-600: #991B1B;
+  --color-danger-50: #FDF2F2;
+
+  --color-success-500: #2D5A3D;
+}
+
+/* Global Outdoor Usability Constraints */
+html {
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg-light);
+  color: #1C201D;
+  -webkit-font-smoothing: antialiased;
+}
+
+.dark body {
+  background-color: var(--color-bg-dark);
+  color: #F3F4F3;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* Focus Ring Customization for High-Visibility Field Use */
+:focus-visible {
+  outline: 3px solid #C4653C;
+  outline-offset: 2px;
+}
